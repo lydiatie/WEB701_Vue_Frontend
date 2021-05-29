@@ -1,24 +1,12 @@
-# vue-frontend
+## Vue-frontend
 
-## Project setup
-```
-npm install
-```
+This is a repository for WEB701 Assignment.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Development server
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Run `npm run serve` for a dev server. Navigate to `http://localhost:8081/`. The app will automatically reload if you change any of the source files. 
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Backend server
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Use backend server from (https://github.com/lydiatie/WEB701_Mongodb_Express_Node_Backend) for API communication.
+
