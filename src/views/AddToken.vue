@@ -10,6 +10,7 @@
           required
           v-model="token.quantity"
           name="quantity"
+          autocomplete="off"
           min="1"
           max="5"
         />
@@ -23,6 +24,7 @@
           required
           v-model="token.address"
           name="address"
+          autocomplete="off"
         />
       </div>
 
