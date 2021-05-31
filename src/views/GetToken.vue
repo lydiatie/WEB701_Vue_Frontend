@@ -11,7 +11,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr :class="{ active: index == currentIndex }"
+            <tr :class="[currentIndex === index ? 'selected' : '']"
                 v-for="(token, index) in tokens"
                 :key="index"
                 @click="setActiveToken(token, index);">
@@ -106,6 +106,10 @@ export default {
 </script>
 
 <style>
+tbody:hover {
+  cursor: pointer;
+}
+
 .list {
   text-align: left;
   max-width: 100%;
@@ -115,5 +119,9 @@ export default {
 
 .token {
   padding-top: 50px;
+}
+
+.selected {
+  background-color: lightblue;
 }
 </style>
