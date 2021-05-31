@@ -8,6 +8,23 @@
       />
       <form name="form" @submit.prevent="handleRegister">
         <div v-if="!successful">
+            <div class="form-group">
+              <label for="roles">Account type</label>
+              <select name="roles" 
+                      v-model="user.roles"
+                      v-validate="'required'"
+                      type="text"
+                      class="form-control"
+                      >
+                <option value="null" disabled>Please select an account</option>
+                <option value="admin">Admin</option>
+                <option value="moderator">Moderator</option> 
+              </select>
+              <div
+                v-if="submitted && errors.has('roles')"
+                class="alert-danger"
+              >{{errors.first('roles')}}</div>
+            </div>
           <div class="form-group">
             <label for="username">Username</label>
             <input
@@ -72,7 +89,7 @@ export default {
   name: 'Register',
   data() {
     return {
-      user: new User('', '', ''),
+      user: new User('', '', '', 'null'),
       submitted: false,
       successful: false,
       message: ''
